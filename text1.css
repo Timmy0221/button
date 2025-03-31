@@ -54,7 +54,6 @@ background-attachment: fixed
 }
 .button1:hover,.button2:hover{
     animation: colorChange 4s infinite;
-    animation-iteration-count: 2;
 }
 ul {
     list-style-type: none;
