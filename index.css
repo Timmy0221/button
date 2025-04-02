@@ -1,89 +1,37 @@
 /*阿吧阿巴阿吧阿巴*/
 body{
     position: relative;
-background-image: url("./2.gif");
-margin: 0;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed
+    background-image: url("./2.gif");
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed
 }
-.button1{
+
+.button1, .button2, .button3, .button4 {
     background-color:rgb(20, 211, 245);
     border: 3px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    padding: 10px 20px;
+    padding: 0.8vw 1.5vw; /* 縮小內距 */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.2vw; /* 縮小字體大小 */
     font-weight: 1000;
-    margin: 20px 4px;
+    margin: 10px 0; /* 增加垂直間距 */
     cursor: pointer;
     border-radius: 40px;
     transition: border-color 0.3s;
-    width: 300px;
-    position:absolute;
-    top: 23%;
-    left: 6%;
+    width: 70%; /* 縮小按鈕寬度 */
+    position: static; /* 移除絕對定位 */
 }
-.button2{
-    background-color:rgb(20, 211, 245);
-    border: 3px solid rgb(255, 255, 255); 
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 1000;
-    margin: 20px 4px;
-    cursor: pointer;
-    border-radius: 40px;
-    transition: border-color 0.3s;
-    width: 300px;
-    position:absolute;
-    top: 43%;
-    left: 6%;
-}
-.button3{
-    background-color:rgb(20, 211, 245);
-    border: 3px solid rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 1000;
-    margin: 20px 4px;
-    cursor: pointer;
-    border-radius: 40px;
-    transition: border-color 0.3s;
-    width: 300px;
-    position:absolute;
-    top: 63%;
-    left: 6%;
-}
-.button4{
-    background-color:rgb(20, 211, 245);
-    border: 3px solid rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 1000;
-    margin: 20px 4px;
-    cursor: pointer;
-    border-radius: 40px;
-    transition: border-color 0.3s;
-    width: 300px;
-    position:absolute;
-    top: 83%;
-    left: 6%;
-}
+
+.button1 { --index: 0; }
+.button2 { --index: 1; }
+.button3 { --index: 2; }
+.button4 { --index: 3; }
+
 @keyframes colorChange{
     0%{border-color: gray;}
     0%{ background-color:rgb(20, 211, 245) }
@@ -104,21 +52,38 @@ div.container{
     border-color: #c8c8c8;
     border-radius: 20px;
     background-color: #fff;
-    margin: 80px 1px 1px 560px;
-    width: 400px;
-    height: 500px;
+    margin: 10vh auto; /* 自動居中並使用相對邊距 */
+    width: 30vw; /* 使用相對寬度 */
+    height: 70vh; /* 增加容器高度 */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+    display: flex; /* 啟用 Flexbox */
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center; /* 垂直置中 */
+    align-items: center; /* 水平置中 */
+    text-align: center; /* 文字置中 */
+    overflow: hidden; /* 確保內容不會超出框框 */
 }
-h1{
-  
+
+@media (max-width: 768px) {
+    .button1, .button2, .button3, .button4 {
+        width: 85%; /* 在小螢幕上進一步縮小按鈕寬度 */
+        font-size: 2.5vw; /* 調整字體大小 */
+    }
+
+    div.container {
+        width: 80vw; /* 在小螢幕上調整容器寬度 */
+        height: 80vh; /* 在小螢幕上增加容器高度 */
+    }
+}
+
+h1, h6 {
     text-align: center;
+    margin: 10px 0; /* 增加文字與按鈕的間距 */
 }
-h6{
-    text-align: center;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
