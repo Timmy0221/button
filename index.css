@@ -71,14 +71,6 @@ div.container{
         width: 77vw; /* 在小螢幕上增加容器寬度 */
         height: 77vh; /* 在小螢幕上增加容器高度 */
     }
-}
-/* 這是針對在手機上看而使用不然拉太長很奇怪 */
-@media (aspect-ratio: 16/9) {
-    div.container {
-        width: 50vw; /* 增加容器寬度 */
-    }
-}
-
 h1, h6 {
     text-align: center;
     margin: 10px 0; /* 增加文字與按鈕的間距 */
