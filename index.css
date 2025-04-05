@@ -27,7 +27,7 @@ body{
     width: 70%; /* 縮小按鈕寬度 */
 }
 
-@keyframes colorChange{
+@keyframes button-rgb{
     0%{border-color: gray;}
     0%{ background-color:rgb(20, 211, 245) }
     25%{border-color: red;}
@@ -39,7 +39,7 @@ body{
     100%{ background-color: rgb(20, 211, 245); }
 }
 .button1:hover,.button2:hover,.button3:hover,.button4:hover{
-    animation: colorChange 3s infinite;
+    animation: button-rgb 3s infinite;
 }
 div.container{
     border: 1px outset;
